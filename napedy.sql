@@ -14,4 +14,5 @@ VALUES ('<euro 0'),
 ('euro 6 Hybrid'),
 ('euro 6 Mild Hybrid'),
 ('elektryczny'),
-('elektryczny plug-in');
+('elektryczny plug-in')
+('wodorowy');

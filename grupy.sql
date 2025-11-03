@@ -1,7 +1,7 @@
 INSERT INTO grupy (grupa)
 VALUES ('MINI'),
-('MIDI'),
+('MIDI'),2
 ('MAXI'),
-('MAXI+'),
+('MAXI+'),4
 ('MEGA'),
-('MEGA+');
+('MEGA+');6
