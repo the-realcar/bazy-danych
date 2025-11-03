@@ -23,7 +23,19 @@ VALUES ('Solaris'),
 ('SOR'),
 ('Volvo'),
 ('Škoda'),
-('Pesa');
+('Setra'),
+('Neoplan'),
+('Autosan'),
+('Karosa'),
+('Ikarus'),
+('ZiU'),
+('Trolza'),
+('Tatra'),
+('Konstal'),
+('Duewag'),
+('Pesa'),
+('Siemens'),
+('Bombardier');
 
 INSERT INTO modele (nazwa_modelu)
 VALUES ('Urbino 12 IV'),
@@ -39,7 +51,49 @@ VALUES ('Urbino 12 IV'),
 ('Citiport 12'),
 ('Citiport 18'),
 ('M121MB'),
-('M181M/3');
+('M181M/3')
+('7700FL'),
+('BN 8,5'),
+('BN12'),
+('NL283')
+('NG313')
+('A300'),
+('AG300'),
+('14Tr.D'),
+('14Tr.E'),
+('Lions City 18 EfficientHybrid'),
+('Urbino 15 II'),
+('Urbino 12 II'),
+('Urbino 18 II'),
+('K4016TD'),
+('7000A.BEV'),
+('7700'),
+('Urbino 10,5 IV'),
+('L090M'),
+('H10-30'),
+('B951'),
+('M101/3'),
+('14TrM'),
+('15TrM'),
+('260.04'),
+('280.37'),
+('14Tr.BET'),
+('15Tr.BET'),
+('27Tr III'),
+('Trollino 12M III'),
+('Trollino 12 IV'),
+('Trollino 18 IV'),
+('5625 Megalopolis'),
+('9.BET'),
+('T3SUSC'),
+('105Na'),
+('GT8N'),
+('112N'),
+('Twist 2015N'),
+('16T'),
+('40T'),
+('NGT6'),
+('Swing 120Na');
 
 INSERT INTO grupy (grupa)
 VALUES ('MINI'),
@@ -152,6 +206,24 @@ VALUES ('PPUT Ostrans', 'Prywatne Przedsiębiorstwo Usług Transportowych Ostran
 ('PKS Tarnów', 'Przedsiębiorstwo Komunikacji Samochodowej w Tarnowie'),
 ('PKS Nowy Sącz', 'Przedsiębiorstwo Komunikacji Samochodowej w Nowym Sączu'),
 ('PKS Zakopane', 'Przedsiębiorstwo Komunikacji Samochodowej w Zakopanem');
+
+INSERT INTO napedy (nazwa_napedu)
+VALUES ('<euro 0'),
+('euro 1'),
+('euro 2'),
+('euro 3'),
+('euro 4'),
+('euro 5'),
+('EEV'),
+('euro 6'),
+('euro 4 CNG'),
+('EEV CNG'),
+('euro 6 CNG'),
+('EEV Hybrid'),
+('euro 6 Hybrid'),
+('euro 6 Mild Hybrid'),
+('elektryczny'),
+('elektryczny plug-in');
 
 INSERT INTO pojazdy (id_pojazdu, id_marki_modelu, rok_prod, nr_VIN)
 VALUES ();
