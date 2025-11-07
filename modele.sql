@@ -2,60 +2,60 @@ INSERT INTO modele (nazwa_modelu)
 VALUES ('Urbino 12 IV'),
 ('Urbino 18 IV'),
 ('Urbino 12 III'),
-('Urbino 15 III'),4
+('Urbino 15 III'),
 ('Urbino 18 III'),
-('A21'),6
+('A21'),
 ('A23'),
-('o530'),8
+('o530'),
 ('o530L'),
-('o530G'),10
+('o530G'),
 ('Citiport 12'),
-('Citiport 18'),12
+('Citiport 18'),
 ('M121MB'),
-('M181M/3')14
+('M181M/3')
 ('7700FL'),
-('BN 8,5'),16
+('BN 8,5'),
 ('BN12'),
-('NL283')18
-('NG313')
-('A300'),20
+('NL283'),
+('NG313'),
+('A300'),
 ('AG300'),
-('14Tr.D'),22
+('14Tr.D'),
 ('14Tr.E'),
-('Lions City 18 EfficientHybrid'),24
+('Lions City 18 EfficientHybrid'),
 ('Urbino 15 II'),
-('Urbino 12 II'),26
+('Urbino 12 II'),
 ('Urbino 18 II'),
-('K4016TD'),28
+('K4016TD'),
 ('7000A.BEV'),
-('7700'),30
+('7700'),
 ('Urbino 10,5 IV'),
-('L090M'),32
+('L090M'),
 ('H10-30'),
-('B951'),34
+('B951'),
 ('M101/3'),
-('14TrM'),36
+('14TrM'),
 ('15TrM'),
-('260.04'),38
+('260.04'),
 ('280.37'),
-('14Tr.BET'),40
+('14Tr.BET'),
 ('15Tr.BET'),
-('27Tr III'),42
+('27Tr III'),
 ('Trollino 12M III'),
-('Trollino 12 IV'),44
+('Trollino 12 IV'),
 ('Trollino 18 IV'),
-('5625 Megalopolis'),46
+('5625 Megalopolis'),
 ('9.BET'),
-('T3SUSC'),48
+('T3SUSC'),
 ('105Na'),
-('GT8N'),50
+('GT8N'),
 ('112N'),
-('Twist 2015N'),52
+('Twist 2015N'),
 ('16T'),
-('40T'),54
+('40T'),
 ('NGT6'),
-('Swing 120Na'),56
+('Swing 120Na'),
 ('S315NF'),
-('15Tr.D'),58
+('15Tr.D'),
 ('15Tr.E'),
 ('Lions City NG323');
