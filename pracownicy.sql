@@ -1,2 +1,3 @@
-INSERT INTO pracownicy (imie, nazwisko, nazwa, id_stanowiska, id_zajezdni)
-VALUES ('Dawid','Volve','the_realcar','14','5');
+INSERT INTO pracownicy (imie, nazwisko, login, haslo, stanowisko_id, uprawnienie_id)
+VALUES ('Dawid','Volve','the_realcar','dpass', 20, 4),
+('Hubert Jakub','Tryniecki','kustul','hpass', 19, 4);

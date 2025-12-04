@@ -1,10 +1,9 @@
-
 -- SCHEMA ROZSZERZONE O MODUŁ PANELU PRACOWNIKÓW
 
 -- ============================
 -- TABELA: stanowiska (15 pozycji)
 -- ============================
-CREATE TABLE stanowiska (
+CREATE TABLE IF NOT EXISTS stanowiska (
     id SERIAL PRIMARY KEY,
     nazwa VARCHAR(100) NOT NULL UNIQUE
 );
@@ -12,7 +11,7 @@ CREATE TABLE stanowiska (
 -- ============================
 -- TABELA: uprawnienia (3 poziomy)
 -- ============================
-CREATE TABLE uprawnienia (
+CREATE TABLE IF NOT EXISTS uprawnienia (
     id SERIAL PRIMARY KEY,
     poziom VARCHAR(50) NOT NULL UNIQUE  -- kierowca, dyspozytor, zarząd
 );
@@ -20,17 +19,16 @@ CREATE TABLE uprawnienia (
 -- ============================
 -- TABELA: pracownicy (dodane logowanie + relacje)
 -- ============================
-CREATE TABLE pracownicy (
+CREATE TABLE IF NOT EXISTS pracownicy (
     id SERIAL PRIMARY KEY,
     imie VARCHAR(100) NOT NULL,
     nazwisko VARCHAR(100) NOT NULL,
     login VARCHAR(150) NOT NULL UNIQUE,
     haslo VARCHAR(255) NOT NULL,
-    discord_id VARCHAR(50),  -- dla logowania Discord OAuth
+    discord_id VARCHAR(50),
     stanowisko_id INT NOT NULL,
     uprawnienie_id INT NOT NULL,
     aktywny BOOLEAN DEFAULT TRUE,
-
     FOREIGN KEY (stanowisko_id) REFERENCES stanowiska(id),
     FOREIGN KEY (uprawnienie_id) REFERENCES uprawnienia(id)
 );
@@ -38,7 +36,7 @@ CREATE TABLE pracownicy (
 -- ============================
 -- TABELA: wnioski kierowców
 -- ============================
-CREATE TABLE wnioski (
+CREATE TABLE IF NOT EXISTS wnioski (
     id SERIAL PRIMARY KEY,
     pracownik_id INT NOT NULL,
     typ VARCHAR(100) NOT NULL, -- kurs z wolnego, urlop, przydział pojazdu stałego itp.
@@ -52,19 +50,24 @@ CREATE TABLE wnioski (
 -- ============================
 -- TABELA: pojazdy (wyjątek: brak SERIAL, numeracja własna)
 -- ============================
-CREATE TABLE pojazdy (
+CREATE TABLE IF NOT EXISTS pojazdy (
     id INT PRIMARY KEY,
     nr_rejestracyjny VARCHAR(20) NOT NULL UNIQUE,
     marka VARCHAR(50),
     model VARCHAR(50),
     rok_produkcji INT,
+    nazwa_zajezdni VARCHAR(100),
+    naped VARCHAR(50),
     sprawny BOOLEAN DEFAULT TRUE
+
+    FOREIGN KEY (nazwa_zajezdni) REFERENCES zajezdnie(nazwa_zajezdni)
+    FOREIGN KEY (naped) REFERENCES typy_napedow(nazwa_typu_napedu)
 );
 
 -- ============================
 -- TABELA: linie
 -- ============================
-CREATE TABLE linie (
+CREATE TABLE IF NOT EXISTS linie (
     id SERIAL PRIMARY KEY,
     nazwa VARCHAR(50) NOT NULL UNIQUE,
     opis TEXT
@@ -73,7 +76,7 @@ CREATE TABLE linie (
 -- ============================
 -- TABELA: brygady
 -- ============================
-CREATE TABLE brygady (
+CREATE TABLE IF NOT EXISTS brygady (
     id SERIAL PRIMARY KEY,
     linia_id INT NOT NULL,
     nazwa VARCHAR(50) NOT NULL,
@@ -84,7 +87,7 @@ CREATE TABLE brygady (
 -- ============================
 -- TABELA: grafiki kierowców
 -- ============================
-CREATE TABLE grafiki (
+CREATE TABLE IF NOT EXISTS grafiki (
     id SERIAL PRIMARY KEY,
     pracownik_id INT NOT NULL,
     data DATE NOT NULL,
@@ -99,7 +102,7 @@ CREATE TABLE grafiki (
 -- ============================
 -- TABELA: logi systemowe (opcjonalne)
 -- ============================
-CREATE TABLE logi (
+CREATE TABLE IF NOT EXISTS logi (
     id SERIAL PRIMARY KEY,
     pracownik_id INT,
     akcja VARCHAR(255),
@@ -107,3 +110,4 @@ CREATE TABLE logi (
 
     FOREIGN KEY (pracownik_id) REFERENCES pracownicy(id)
 );
+

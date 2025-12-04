@@ -12,7 +12,7 @@ VALUES ('Urbino 12 IV'),
 ('Citiport 12'),
 ('Citiport 18'),
 ('M121MB'),
-('M181M/3')
+('M181M/3'),
 ('7700FL'),
 ('BN 8,5'),
 ('BN12'),

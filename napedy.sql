@@ -1,5 +1,5 @@
 INSERT INTO napedy (nazwa_napedu)
-VALUES ('<euro 0'),
+VALUES ('euro 0'),
 ('euro 1'),
 ('euro 2'),
 ('euro 3'),
@@ -14,5 +14,5 @@ VALUES ('<euro 0'),
 ('euro 6 Hybrid'),
 ('euro 6 Mild Hybrid'),
 ('elektryczny'),
-('elektryczny plug-in')
+('elektryczny plug-in'),
 ('wodorowy');

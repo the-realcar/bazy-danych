@@ -1,5 +1,5 @@
 INSERT INTO typy_zajezdni (nazwa_typu)
-VALUES ('AUtobusowa'),
+VALUES ('Autobusowa'),
 ('Trolejbusowa'),
 ('Tramwajowa'),
 ('Autobusowo-trolejbusowa'),

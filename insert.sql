@@ -232,7 +232,7 @@ INSERT INTO rejestracje (id_pojazdu, rejestracja)
 VALUES ();
 
 INSERT INTO pracownicy (imie, nazwisko, nazwa, id_stanowiska, id_zajezdni)
-VALUES ('Dawid','Volve','the_realcar','14','5');
+VALUES ('Dawid','Volve','the_realcar','14','5'), ('Hubert Jakub','Tryniecki','kustul','13','5');
 
 INSERT INTO przydzialy (id_pojazdu, id_pracownka, data_od, data_do)
 VALUES ();
