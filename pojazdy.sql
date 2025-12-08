@@ -1,3 +1,9 @@
+SELECT * FROM ostrans.pojazdy;
+
+COPY ostrans.pojazdy (id, nr_taborowy, nr_rejestracyjny, marka, model, rok_produkcji, nazwa_zajezdni, naped, sprawny) 
+FROM 'C:\Users\cosinus.COSINUS\Documents\ostrans\baza danych\csv\aa3.csv'
+DELIMITER ',';
+
 INSERT INTO pojazdy (id, nr_taborowy, nr_rejestracyjny, marka, model, rok_produkcji, nazwa_zajezdni, naped, sprawny)
 VALUES
 -- przykłady (id sekwencyjne, nr_taborowy z CSV, nr_rejestracyjny unikalny WOS-<id>):
